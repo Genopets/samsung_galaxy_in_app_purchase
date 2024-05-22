@@ -25,38 +25,78 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
         title: const Text('Galaxy IAP Example'),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            _buildButton('getPlatformVersion'),
-            SizedBox(
-              width: 150,
-              child: TextField(
-                controller: itemText,
-                decoration: const InputDecoration(helperText: 'Item ID'),
-              ),
-            ),
-            const SizedBox(height: 5),
-            _buildButton('getProductDetails'),
-            _buildButton('purchaseItem'),
-            Text('Last purchaseId: $lastPurchaseId'),
-            _buildButton('consumePurchasedItem',
-                enabled: lastPurchaseId != null),
-            _buildButton('getUserOwnedItems'),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 40),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _buildTitle('Pseudo step by step process ==', isTitle: true),
+              _buildTitle('1st: Enter valid Galaxy Store Item ID'),
+              _buildTextfield(),
+              _buildTitle('2nd: Fetch its data from the Galaxy Store API'),
+              _buildButton('getProductDetails'),
+              _buildTitle('3rd: Purchase the item'),
+              _buildButton('purchaseItem'),
+              _buildTitle('4th: Consume the purchased item'),
+              _buildButton('consumePurchasedItem',
+                  enabled: lastPurchaseId != null),
+              _buildTitle('5th: Get user purchased and consumed items'),
+              _buildButton('getUserOwnedItems'),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  TextField _buildTextfield() {
+    return TextField(
+      controller: itemText,
+      style: const TextStyle(
+        fontWeight: FontWeight.normal,
+        fontSize: 15,
+        height: 1,
+      ),
+      decoration: const InputDecoration(
+        helperText: '',
+        isDense: true,
+        contentPadding: EdgeInsets.only(
+          top: 5,
+          bottom: 5,
+          left: 10,
+          right: 10,
+        ),
+      ),
+    );
+  }
+
+  Widget _buildTitle(String title, {bool isTitle = false}) {
+    return Padding(
+      padding: EdgeInsets.only(bottom: isTitle ? 10 : 0),
+      child: Align(
+        alignment: Alignment.centerLeft,
+        child: Text(
+          title,
+          style: TextStyle(
+              fontWeight: isTitle ? FontWeight.bold : FontWeight.normal,
+              fontSize: isTitle ? 20 : 15),
         ),
       ),
     );
   }
 
   Widget _buildButton(String functionName, {bool enabled = true}) {
-    return ElevatedButton(
-      onPressed: enabled
-          ? () {
-              _executeFunction(functionName);
-            }
-          : null,
-      child: Text(functionName),
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.only(bottom: 15),
+      child: ElevatedButton(
+        onPressed: enabled
+            ? () {
+                _executeFunction(functionName);
+              }
+            : null,
+        child: Text(functionName),
+      ),
     );
   }
 
