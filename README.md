@@ -1,6 +1,6 @@
 # Flutter Samsung Galaxy In-App Purchase Plugin
 
-This Flutter plugin facilitates the integration of Samsung Galaxy In-App Purchase (IAP) SDK with your Flutter application, enabling seamless in-app purchase functionality for Samsung Galaxy devices. 
+A Flutter plugin that facilitates the integration of Samsung Galaxy In-App Purchase (IAP) SDK with your Flutter application, enabling seamless in-app purchase functionality for Samsung Galaxy devices. 
 
 |             | Android |
 |-------------|---------|
