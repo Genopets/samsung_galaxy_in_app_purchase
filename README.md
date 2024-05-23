@@ -33,6 +33,7 @@ This Flutter plugin facilitates the integration of Samsung Galaxy In-App Purchas
   <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow6.jpeg?true"
     alt="" height="400"/>
 </p>
+
 ## Requirements step by step
 
 1. Have your app almost ready to deploy (Mock IAP flow)
@@ -83,8 +84,95 @@ allprojects {
 To use the library, just create an instance of GalaxyIap and any of the available functions can be used.
 
 ```dart
-  final galaxyIapPlugin = GalaxyIap();
-  final await galaxyIapPlugin.getPurchasableItems();
+    final _galaxyIapPlugin = GalaxyIap();
+    final await _galaxyIapPlugin.getPurchasableItems();
+  ...
+
+    switch (functionName) {
+    case 'getPlatformVersion':
+        String? version = await _galaxyIapPlugin.getPlatformVersion();
+        if (mounted) {
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+            return Dialog(
+                child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                    Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Text(version ?? 'error')),
+                    ElevatedButton(
+                    onPressed: () {
+                        Navigator.of(context).pop();
+                    },
+                    child: const Text('Close'),
+                    ),
+                ],
+                ),
+            );
+            },
+        );
+        }
+        break;
+    case 'getProductDetails':
+        final listResult =
+            await _galaxyIapPlugin.getProductDetails(itemText.text.trim());
+        if (mounted) {
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+            return ProductDetailDialog(item: listResult[0]);
+            },
+        );
+        }
+
+        break;
+    case 'purchaseItem':
+        final purchase = await _galaxyIapPlugin.purchaseItem(
+            itemText.text.trim(), 'your_pass_through_param');
+        if (mounted && purchase != null) {
+        setState(() {
+            lastPurchaseId = purchase.mPurchaseId;
+        });
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+            return PurchaseDetailDialog(purchase: purchase);
+            },
+        );
+        }
+        break;
+    case 'consumePurchasedItem':
+        if (lastPurchaseId != null) {
+        final consumes =
+            await _galaxyIapPlugin.consumePurchasedItem(lastPurchaseId!);
+        if (mounted) {
+            showDialog(
+            context: context,
+            builder: (BuildContext context) {
+                return ConsumesListDialog(consumes: consumes);
+            },
+            );
+        }
+        }
+        break;
+    case 'getUserOwnedItems':
+        final listResult = await _galaxyIapPlugin.getUserOwnedItems('item');
+        if (mounted) {
+        showDialog(
+            context: context,
+            builder: (BuildContext context) {
+            return ProductsListDialog(products: listResult);
+            },
+        );
+        }
+        break;
+    default:
+        throw PlatformException(
+            code: 'UNSUPPORTED_FUNCTION',
+            message: 'Function $functionName not supported');
+    }
   ...
 ```
 ## Resources

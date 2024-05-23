@@ -14,7 +14,7 @@ class GalaxyIapExample extends StatefulWidget {
 }
 
 class _GalaxyIapExampleState extends State<GalaxyIapExample> {
-  final GalaxyIap _galaxyIap = GalaxyIap();
+  final GalaxyIap _galaxyIapPlugin = GalaxyIap();
   final itemText = TextEditingController();
   String? lastPurchaseId;
 
@@ -106,7 +106,7 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
     try {
       switch (functionName) {
         case 'getPlatformVersion':
-          String? version = await _galaxyIap.getPlatformVersion();
+          String? version = await _galaxyIapPlugin.getPlatformVersion();
           if (mounted) {
             showDialog(
               context: context,
@@ -133,7 +133,7 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
           break;
         case 'getProductDetails':
           final listResult =
-              await _galaxyIap.getProductDetails(itemText.text.trim());
+              await _galaxyIapPlugin.getProductDetails(itemText.text.trim());
           if (mounted) {
             showDialog(
               context: context,
@@ -145,7 +145,7 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
 
           break;
         case 'purchaseItem':
-          final purchase = await _galaxyIap.purchaseItem(
+          final purchase = await _galaxyIapPlugin.purchaseItem(
               itemText.text.trim(), 'your_pass_through_param');
           if (mounted && purchase != null) {
             setState(() {
@@ -162,7 +162,7 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
         case 'consumePurchasedItem':
           if (lastPurchaseId != null) {
             final consumes =
-                await _galaxyIap.consumePurchasedItem(lastPurchaseId!);
+                await _galaxyIapPlugin.consumePurchasedItem(lastPurchaseId!);
             if (mounted) {
               showDialog(
                 context: context,
@@ -174,7 +174,7 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
           }
           break;
         case 'getUserOwnedItems':
-          final listResult = await _galaxyIap.getUserOwnedItems('item');
+          final listResult = await _galaxyIapPlugin.getUserOwnedItems('item');
           if (mounted) {
             showDialog(
               context: context,
