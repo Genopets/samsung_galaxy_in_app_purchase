@@ -1,12 +1,13 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:galaxy_iap/galaxy_iap_method_channel.dart';
+import 'package:samsung_galaxy_in_app_purchase/galaxy_iap_method_channel.dart';
 
 void main() {
   group('MethodChannelGalaxyIap', () {
     late MethodChannelGalaxyIap galaxyIap;
 
-    const MethodChannel channel = MethodChannel('galaxy_iap');
+    const MethodChannel channel =
+        MethodChannel('samsung_galaxy_in_app_purchase');
 
     setUp(() {
       galaxyIap = MethodChannelGalaxyIap();

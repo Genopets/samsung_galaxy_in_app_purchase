@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:galaxy_iap/entities/galaxy_purchase.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_purchase.dart';
 
 class PurchaseDetailDialog extends StatelessWidget {
   final GalaxyPurchase purchase;

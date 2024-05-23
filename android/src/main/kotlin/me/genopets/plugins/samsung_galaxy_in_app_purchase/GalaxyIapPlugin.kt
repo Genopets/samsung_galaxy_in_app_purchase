@@ -1,4 +1,4 @@
-package me.genopets.plugins.galaxy_iap
+package me.genopets.plugins.samsung_galaxy_in_app_purchase
 
 import com.samsung.android.sdk.iap.lib.listener.OnConsumePurchasedItemsListener
 import com.samsung.android.sdk.iap.lib.listener.OnGetOwnedListListener
@@ -24,7 +24,7 @@ class GalaxyIapPlugin: FlutterPlugin, MethodCallHandler {
     private val TAG = "IAP-Samsung"
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
-        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "galaxy_iap")
+        channel = MethodChannel(flutterPluginBinding.binaryMessenger, "samsung_galaxy_in_app_purchase")
         channel.setMethodCallHandler(this)
         context = flutterPluginBinding.applicationContext
     }

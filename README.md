@@ -2,9 +2,23 @@
 
 This Flutter plugin facilitates the integration of Samsung Galaxy In-App Purchase (IAP) SDK with your Flutter application, enabling seamless in-app purchase functionality for Samsung Galaxy devices. 
 
+## Requirements step by step
+
+1. Have your app almost ready to deploy (Mock IAP flow)
+2. Samsung device
+3. Device should be logged in with a Samsung Account (Device settings)
+4. Create an account at the [Galaxy Store](https://seller.samsungapps.com/)
+   - Create an app, fill in some necessary data
+   - Upload an APK
+   - Fill in IAP products
+     - Your items should have similar id using your app's bundle identifier com.app.mobile.dev_item_xyz
+5. Register licensed testers in [Galaxy Store Admin](https://seller.samsungapps.com/member/getSellerDetail.as)
+6. Implement this package in your Flutter App and wire it
+   - To test you should use an account added in step 5, and have IAP items with same bundle identifier step 4.
+
 ## How it works
 
-To get started with integrating the Samsung Galaxy IAP SDK into your Flutter project, follow these steps:
+We are using the [Samsung In-App Purchase SDK v6.1](https://developer.samsung.com/iap/release-note.html) in the background so from flutter side we can use channels to perform their IAP functionalities.
 
 ### Step 1: Copy the Repository
 
@@ -22,6 +36,8 @@ To use the library, just create an instance of GalaxyIap and any of the availabl
   final _galaxyIapPlugin = GalaxyIap();
   final await _galaxyIapPlugin.getPurchasableItems();
 ```
+## Resources
+- https://developer.samsung.com/iap
 ### Important
 
 Since the Samsung Galaxy IAP library is being imported locally, it is necessary to specify to our Maven where it should read the library from, it must point to the library repository in the path galaxy_iap/android/iap_sdk

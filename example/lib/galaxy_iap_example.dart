@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:galaxy_iap/galaxy_iap.dart';
 import 'package:galaxy_iap_example/dialogs/consumes_list_dialog.dart';
 import 'package:galaxy_iap_example/dialogs/product_detail_dialog.dart';
 import 'package:galaxy_iap_example/dialogs/products_list_dialog.dart';
 import 'package:galaxy_iap_example/dialogs/purchase_detail_dialog.dart';
+import 'package:samsung_galaxy_in_app_purchase/samsung_galaxy_in_app_purchase.dart';
 
 class GalaxyIapExample extends StatefulWidget {
   const GalaxyIapExample({super.key});

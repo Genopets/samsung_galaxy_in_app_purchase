@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:galaxy_iap/entities/galaxy_product.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_product.dart';
 
 class ProductDetailDialog extends StatelessWidget {
   final GalaxyProduct item;

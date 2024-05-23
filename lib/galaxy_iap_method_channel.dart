@@ -2,11 +2,11 @@ import 'dart:convert';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
-import 'package:galaxy_iap/entities/galaxy_consume.dart';
-import 'package:galaxy_iap/entities/galaxy_owned_product.dart';
-import 'package:galaxy_iap/entities/galaxy_product.dart';
-import 'package:galaxy_iap/entities/galaxy_purchase.dart';
-import 'package:galaxy_iap/galaxy_iap.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_consume.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_owned_product.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_product.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_purchase.dart';
+import 'package:samsung_galaxy_in_app_purchase/samsung_galaxy_in_app_purchase.dart';
 
 import 'galaxy_iap_platform_interface.dart';
 
@@ -14,7 +14,7 @@ import 'galaxy_iap_platform_interface.dart';
 class MethodChannelGalaxyIap extends GalaxyIapPlatform {
   /// The method channel used to interact with the native platform.
   @visibleForTesting
-  final methodChannel = const MethodChannel('galaxy_iap');
+  final methodChannel = const MethodChannel('samsung_galaxy_in_app_purchase');
 
   @override
   Future<String?> getPlatformVersion() async {

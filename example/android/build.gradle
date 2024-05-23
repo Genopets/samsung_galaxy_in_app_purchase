@@ -17,7 +17,7 @@ allprojects {
         mavenCentral()
          flatDir {
             dirs 'libs'
-            dirs project(':galaxy_iap').file('libs')
+            dirs project(':samsung_galaxy_in_app_purchase').file('libs')
         }
     }
 }
