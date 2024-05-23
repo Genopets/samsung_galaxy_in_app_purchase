@@ -1,4 +1,4 @@
-group 'me.genopets.plugins.galaxy_iap'
+group 'me.genopets.plugins.samsung_galaxy_in_app_purchase'
 version '1.0-SNAPSHOT'
 
 buildscript {

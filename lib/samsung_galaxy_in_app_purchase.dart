@@ -1,7 +1,7 @@
-import 'package:galaxy_iap/entities/galaxy_consume.dart';
-import 'package:galaxy_iap/entities/galaxy_owned_product.dart';
-import 'package:galaxy_iap/entities/galaxy_product.dart';
-import 'package:galaxy_iap/entities/galaxy_purchase.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_consume.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_owned_product.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_product.dart';
+import 'package:samsung_galaxy_in_app_purchase/entities/galaxy_purchase.dart';
 
 import 'galaxy_iap_platform_interface.dart';
 
