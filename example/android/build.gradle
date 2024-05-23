@@ -15,7 +15,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-         flatDir {
+        flatDir {
             dirs 'libs'
             dirs project(':samsung_galaxy_in_app_purchase').file('libs')
         }
