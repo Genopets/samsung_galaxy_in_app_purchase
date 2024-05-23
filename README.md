@@ -8,29 +8,29 @@ This Flutter plugin facilitates the integration of Samsung Galaxy In-App Purchas
 
 ## Some screens
 <p>
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/example.gif?raw=true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/example.gif?raw=true"
     alt="An animated image of the iOS in-app purchase UI" height="400"/>
 </p>
 
 <p>
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/flow1.jpeg?true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow1.jpeg?true"
     alt="" height="400"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/flow2.jpeg?true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow2.jpeg?true"
     alt="" height="400"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/flow3.jpeg?true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow3.jpeg?true"
     alt="" height="400"/>
 </p>
 
 <p>
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/flow4.jpeg?true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow4.jpeg?true"
     alt="" height="400"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/flow5.jpeg?true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow5.jpeg?true"
     alt="" height="400"/>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="https://github.com/samsung_galaxy_in_app_purchase/doc/flow6.jpeg?true"
+  <img src="https://github.com/Genopets/samsung_galaxy_in_app_purchase/blob/master/doc/flow6.jpeg?true"
     alt="" height="400"/>
 </p>
 ## Requirements step by step
