@@ -30,6 +30,7 @@ class _GalaxyIapExampleState extends State<GalaxyIapExample> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              _buildButton('getPlatformVersion'),
               _buildTitle('Pseudo step by step process ==', isTitle: true),
               _buildTitle('1st: Enter valid Galaxy Store Item ID'),
               _buildTextfield(),

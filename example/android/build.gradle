@@ -15,8 +15,9 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url "$projectDir/../../../android/iap_sdk"
+         flatDir {
+            dirs 'libs'
+            dirs project(':galaxy_iap').file('libs')
         }
     }
 }

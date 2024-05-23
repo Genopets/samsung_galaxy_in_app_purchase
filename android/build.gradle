@@ -18,10 +18,7 @@ allprojects {
     repositories {
         google()
         mavenCentral()
-        maven {
-            url "$projectDir/iap_sdk"
-        }
-// FOR DEV ONLY
+    // FOR DEV ONLY
     //    flatDir {
     //        dirs "libs"
     //    }
@@ -53,8 +50,7 @@ android {
 }
 
 dependencies {
-    implementation 'com.samsung.android.sdk.iap:genopets:1.0.0'
     implementation 'androidx.annotation:annotation:1.7.1'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    // implementation(name: 'flutter', ext:'jar')
+    implementation(name:'samsung-sdk-iap-genopets-1.0.0', ext:'aar')
 }
