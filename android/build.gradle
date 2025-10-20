@@ -29,6 +29,7 @@ apply plugin: 'com.android.library'
 apply plugin: 'kotlin-android'
 
 android {
+    namespace 'me.genopets.plugins.samsung_galaxy_in_app_purchase'
     compileSdkVersion 31
 
     compileOptions {
